@@ -3,119 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Template</title>
+    <title>Photo Album</title>
+
     <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-dark">
-    <!-- Navbar -->
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Nav</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                   
-                </ul>
-            </div>
+        <a class="navbar-brand" href="#">
+            📷 Photo Album
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Albums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">Photo Album</h1>
+        
+        <!-- Album Information -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    
+                    <p class="text-center">
+                        This is a collection of beautiful photos from various places and events.
+                        Explore and enjoy the moments captured in these images.
+                    </p>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary mr-3">View Album</button>
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Centered Main Content -->
-    <div class="d-flex align-items-start justify-content-start" style="min-height: 80vh;">
-        <div class="container text-center text-white">
-            <h1>Welcome to Shahzaib Bootstrap Template</h1>
-            <p>This is a simple single-page template with a dark color theme.</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
             
- <!-- Thumbnails Section (Centered) -->
- <div class="d-flex align-items-center justify-content-center" style="min-height: 80vh;">
-    <div class="container text-center text-white">
-        <!-- First Set of Thumbnails -->
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3 bg-secondary">
-                    <img src="image1.jpg" alt="">
-                    <p>Thumbnail 1</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3"> 
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image2.jpg" alt="">
-                    <p>Thumbnail 2</p>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
+            
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image3.jpg" alt="">
-                    <p>Thumbnail 3</p>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
+            
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Second Set of Thumbnails -->
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image4.jpg" alt="">
-                    <p>Thumbnail 4</p>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
+            
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image5.jpg" alt="">
-                    <p>Thumbnail 5</p>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
+            
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3 bg-secondary">
-                    <img src="image6.jpg" alt="">
-                    <p>Thumbnail 6</p>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image 1</h5> -->
+                        <p class="card-text">Description for Image 1.</p>
+            
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-secondary btn-sm">View</button>
+                        </div>
+            
+                        <!-- Dummy Timestamp -->
+                        <div class="text-muted text-right mt-2">
+                            <small>9 min ago</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Third Set of Thumbnails -->
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image7.jpg" alt="">
-                    <p>Thumbnail 7</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image8.jpg" alt="">
-                    <p>Thumbnail 8</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="thumbnail border p-3  bg-secondary">
-                    <img src="image9.jpg" alt="">
-                    <p>Thumbnail 9</p>
-                </div>
-            </div>
+            
+            <!-- Add more cards for additional images -->
         </div>
     </div>
-</div>
 
-    
-
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            &copy; 2023 Dark Theme Template by HeXcod.co
-        </div>
-    </footer>
-
-    <!-- Link to Bootstrap JS (optional) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <!-- Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
