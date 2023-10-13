@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Sales Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    </svg>
+                    <strong>Sales Dashboard</strong>
+                </a>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+          <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-secondary sidebar">
+              <div class="position-sticky">
+                <ul class="nav flex-column">
+                  <li class="nav-item bg-light">
+                    <a class="nav-link active" href="#">
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sales-chart">
+                      Sales Chart
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#latest-sales">
+                      Latest Sales
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              <h1 class="mt-5">Sales Dashboard</h1>
+        
+              <!-- Sales Chart Section -->
+              <div class="my-5" id="sales-chart">
+                <canvas id="salesChart" width="400" height="200"></canvas>
+                <h2 class="mt-4">Monthly Sales Overview</h2>
+              </div>
+        
+              <!-- Latest Sales Section (Example) -->
+              <h2 class="mt-5" id="latest-sales">Latest Sales</h2>
+              <div class="row" id="latestSales">
+                <!-- Add your sales data cards here -->
+              </div>
+            </main>
+          </div>
+        </div>
+        
+    </header>
+           
+
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample data for the sales chart (replace with your actual data)
+        var salesData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Monthly Sales',
+                data: [2000, 2300, 2500, 1900, 2200, 2600],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+            }]
+        };
+
+        // Get the canvas element and render the chart
+        var ctx = document.getElementById('salesChart').getContext('2d');
+        var salesChart = new Chart(ctx, {
+            type: 'line',
+            data: salesData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+         // Function to generate random sales data
+    function generateRandomSales() {
+        var salesData = [
+            { product: "Product A", amount: Math.floor(Math.random() * 1000) },
+            { product: "Product B", amount: Math.floor(Math.random() * 1000) },
+            { product: "Product C", amount: Math.floor(Math.random() * 1000) },
+            { product: "Product D", amount: Math.floor(Math.random() * 1000) },
+        ];
+
+        return salesData;
+    }
+
+    // Function to render sales data on the web page
+    function renderSalesData() {
+        var latestSales = document.getElementById("latestSales");
+        var salesData = generateRandomSales();
+
+        salesData.forEach(function (item) {
+            var salesCard = document.createElement("div");
+            salesCard.className = "col-md-3 mb-3";
+            salesCard.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.product}</h5>
+                        <p class="card-text">Amount: $${item.amount}</p>
+                    </div>
+                </div>
+            `;
+            latestSales.appendChild(salesCard);
+        });
+    }
+
+    // Call the renderSalesData function to display sales data
+    renderSalesData();
+    </script>
+</body>
+</html>
